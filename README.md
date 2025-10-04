@@ -1,59 +1,58 @@
-# Mall Customer Segmentation with K-Means
+# 🏠 Real Estate Clustering using K-Means
 
-This project demonstrates **unsupervised learning** using **K-Means clustering** on the Mall Customer Segmentation dataset.
+## 📌 Objective
+This project applies **K-Means Clustering**, an unsupervised machine learning algorithm, to group real estate data into meaningful clusters based on similar property attributes.
+
+---
+
+## ⚙️ Tools & Libraries
+- **Python 3**
+- **Pandas** – Data manipulation  
+- **Scikit-learn** – Machine learning (KMeans, PCA, Silhouette Score)  
+- **Matplotlib** – Data visualization  
 
 ---
 
 ## 📂 Dataset
-The dataset is loaded directly from an online source (no need to download manually):
-- **URL:** [Mall Customers Dataset](https://raw.githubusercontent.com/mwaskom/seaborn-data/master/mall_customers.csv)
+File: `Real Estate DataSet.csv`
+
+The dataset includes real estate attributes such as transaction date, house age, distance to MRT station, number of convenience stores, latitude, and longitude.
 
 ---
 
-## ⚙️ Steps Performed
+## 🧩 Steps Performed
 
-1. **Load Dataset**  
-   - Used `pandas.read_csv()` to read directly from the online link.
+1. **Load & Clean Data**  
+   Handle missing values and select numeric columns for clustering.
 
-2. **Feature Selection**  
-   - Selected features: **Age**, **Annual Income (k$)**, and **Spending Score (1-100)**.
+2. **Feature Scaling**  
+   Standardize numerical features using `StandardScaler`.
 
-3. **Elbow Method**  
-   - Used to determine the optimal number of clusters by plotting inertia vs. k.
+3. **Find Optimal K**  
+   Use the **Elbow Method** to visualize inertia and determine the best number of clusters.
 
 4. **K-Means Clustering**  
-   - Applied K-Means with the optimal k (commonly `k=5` for this dataset).  
-   - Assigned cluster labels to customers.
+   Fit the K-Means model to the scaled data and assign cluster labels.
 
-5. **Evaluation**  
-   - Used **Silhouette Score** to evaluate clustering quality.
+5. **Dimensionality Reduction (PCA)**  
+   Reduce high-dimensional data to 2D for visualization.
 
 6. **Visualization**  
-   - Reduced features to **2D with PCA** and plotted clusters with different colors.  
-   - Displayed centroids as black `X`.
+   Plot clusters in 2D color-coded scatter plots.
+
+7. **Evaluation**  
+   Compute the **Silhouette Score** to measure cluster quality.
+
+8. **Export Results**  
+   Save the dataset with cluster labels as `Real_Estate_Clustered.csv`.
 
 ---
 
 ## 📊 Output
-
-- **Elbow Method Graph** → Helps choose k.  
-- **Cluster Visualization (PCA)** → Customers grouped in different colors.  
-- **Silhouette Score** → Numerical measure of clustering quality.  
-- **clustered_customers.csv** → Dataset with assigned cluster labels.
+- **Elbow Plot** – Helps identify the best number of clusters.  
+- **Cluster Visualization (PCA 2D Plot)** – Shows how data points are grouped.  
+- **Silhouette Score** – Quantitative measure of cluster quality.
 
 ---
 
-## 🚀 Tools & Libraries
-
-- Python  
-- Pandas  
-- Matplotlib  
-- Scikit-learn  
-
----
-
-## ▶️ How to Run
-
-1. Install dependencies:
-   ```bash
-   pip install pandas matplotlib scikit-learn
+## 🧠 Example Results
