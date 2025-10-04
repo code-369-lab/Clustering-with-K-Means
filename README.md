@@ -54,5 +54,3 @@ The dataset includes real estate attributes such as transaction date, house age,
 - **Silhouette Score** – Quantitative measure of cluster quality.
 
 ---
-
-## 🧠 Example Results
